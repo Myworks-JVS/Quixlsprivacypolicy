@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -23,9 +24,20 @@ body{
 .header{
     background:linear-gradient(135deg,#1565C0,#42A5F5);
     color:white;
-    padding:60px 20px;
+    padding:50px 20px 60px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* App Icon */
+.app-icon{
+    width:82px;
+    height:82px;
+    object-fit:cover;
+    border-radius:19px;
+    display:block;
+    margin:0 auto 18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.20);
 }
 
 .header h1{
@@ -36,6 +48,58 @@ body{
 .header p{
     opacity:.95;
     font-size:17px;
+}
+
+/* Header Links */
+.header-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:8px 14px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* Features Button */
+.features-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.65);
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    background:rgba(255,255,255,.10);
+    transition:all .2s ease;
+}
+
+.features-link:hover{
+    background:rgba(255,255,255,.20);
+    border-color:white;
+    transform:translateY(-1px);
+}
+
+.features-icon{
+    width:18px;
+    height:18px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
 
 .container{
@@ -90,248 +154,330 @@ td{
     font-size:14px;
 }
 
-.badge{
-    display:inline-block;
-    background:#E3F2FD;
-    color:#1565C0;
-    padding:8px 14px;
-    border-radius:30px;
-    margin-top:18px;
-    font-weight:600;
+/* Mobile */
+@media (max-width:600px){
+
+    .header{
+        padding:40px 18px 45px;
+    }
+
+    .app-icon{
+        width:68px;
+        height:68px;
+        border-radius:16px;
+        margin-bottom:15px;
+    }
+
+    .header h1{
+        font-size:34px;
+    }
+
+    .header p{
+        font-size:16px;
+    }
+
+    .header-links{
+        gap:8px;
+    }
+
+    .badge,
+    .features-link{
+        font-size:13px;
+        padding:7px 12px;
+    }
+
+    .container{
+        margin:25px auto;
+        padding:0 14px;
+    }
+
+    .card{
+        padding:24px 20px;
+        border-radius:14px;
+    }
+
+    h2{
+        font-size:23px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,
+    td{
+        padding:10px;
+    }
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="header">
+
+
+<!-- Quixls App Icon -->
+<img
+    src="icon_xls.png"
+    alt="Quixls App Icon"
+    class="app-icon"
+>
+
 <h1>Quixls</h1>
+
 <p>Privacy Policy</p>
-<div class="badge">Last Updated: July 21, 2026</div>
+
+<div class="header-links">
+
+    <div class="badge">
+        Last Updated: July 21, 2026
+    </div>
+
+    <a href="Features.html"
+       class="features-link"
+       aria-label="View Quixls Features">
+
+        <svg class="features-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+        </svg>
+
+        Features
+
+    </a>
+
+</div>
+
+
 </div>
 
 <div class="container">
 
 <div class="card">
-<h2>Introduction</h2>
 
-<p>
-Thank you for using QuiXLS.
-Your privacy is important to us.
-This Privacy Policy explains how the application collects, uses, and protects your information while you use the app.
-</p>
+    <h2>Introduction</h2>
+
+    <p>
+        Thank you for using QuiXLS.
+        Your privacy is important to us.
+        This Privacy Policy explains how the application collects,
+        uses, and protects your information while you use the app.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h2>Information We Collect</h2>
+
+    <p>QuiXLS is designed to operate primarily on your device.</p>
+
+    <ul>
+        <li>Student IDs entered by users for quiz identification.</li>
+        <li>Excel files selected by users for loading quiz questions.</li>
+        <li>Quiz responses and scores generated during use.</li>
+        <li>PDF and CSV reports created only when requested by the user.</li>
+    </ul>
+
+    <p>
+        The application does not require account registration.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h2>How Information Is Used</h2>
+
+    <ul>
+        <li>Load quiz questions from Excel files.</li>
+        <li>Display quizzes and calculate scores.</li>
+        <li>Generate PDF and CSV reports.</li>
+        <li>Improve application reliability and user experience.</li>
+    </ul>
+
+</div>
+
+
+<div class="card">
+
+    <h2>Data Storage</h2>
+
+    <p>
+        Quiz information, Student IDs, generated reports, and selected
+        files are processed locally on your device.
+    </p>
+
+    <p>
+        QuiXLS does not upload quiz content or Student IDs to our servers.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h2>Permissions</h2>
+
+    <table>
+
+        <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>File Access</td>
+            <td>Allows users to select Excel quiz files.</td>
+        </tr>
+
+        <tr>
+            <td>Downloads Storage</td>
+            <td>Used to save PDF and CSV reports created by the user.</td>
+        </tr>
+
+        <tr>
+            <td>Internet</td>
+            <td>
+                Used for loading online images referenced in quiz files
+                and serving advertisements.
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+<div class="card">
+
+    <h2>Advertising</h2>
+
+    <p>
+        QuiXLS uses Google AdMob to display advertisements.
+    </p>
+
+    <p>
+        AdMob may collect certain device identifiers and usage
+        information in accordance with Google's own Privacy Policy.
+    </p>
+
+    <p>
+        For more information, please visit:
+    </p>
+
+    <p>
+        https://policies.google.com/privacy
+    </p>
 
 </div>
 
 <div class="card">
 
-<h2>Information We Collect</h2>
+    <h2>Third-Party Services</h2>
 
-<p>QuiXLS is designed to operate primarily on your device.</p>
+    <p>
+        The application may use trusted third-party services including:
+    </p>
 
-<ul>
+    <ul>
+        <li>Google AdMob</li>
+        <li>Google Play Services</li>
+    </ul>
 
-<li>Student IDs entered by users for quiz identification.</li>
-
-<li>Excel files selected by users for loading quiz questions.</li>
-
-<li>Quiz responses and scores generated during use.</li>
-
-<li>PDF and CSV reports created only when requested by the user.</li>
-
-</ul>
-
-<p>
-The application does not require account registration.
-</p>
+    <p>
+        These services are governed by their respective privacy policies.
+    </p>
 
 </div>
 
 <div class="card">
 
-<h2>How Information Is Used</h2>
+    <h2>Children's Privacy</h2>
 
-<ul>
+    <p>
+        QuiXLS is intended for educational use.
+    </p>
 
-<li>Load quiz questions from Excel files.</li>
+    <p>
+        The application does not knowingly collect personal information
+        from children through remote servers.
+    </p>
 
-<li>Display quizzes and calculate scores.</li>
-
-<li>Generate PDF and CSV reports.</li>
-
-<li>Improve application reliability and user experience.</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Data Storage</h2>
-
-<p>
-
-Quiz information, Student IDs, generated reports, and selected files are processed locally on your device.
-
-QuiXLS does not upload quiz content or Student IDs to our servers.
-
-</p>
+    <p>
+        Parents, guardians, and educational institutions are responsible
+        for supervising usage where appropriate.
+    </p>
 
 </div>
 
 <div class="card">
 
-<h2>Permissions</h2>
+    <h2>Data Security</h2>
 
-<table>
+    <p>
+        Reasonable technical measures are used to help protect information
+        processed by the application.
+    </p>
 
-<tr>
-<th>Permission</th>
-<th>Purpose</th>
-</tr>
-
-<tr>
-<td>File Access</td>
-<td>Allows users to select Excel quiz files.</td>
-</tr>
-
-<tr>
-<td>Downloads Storage</td>
-<td>Used to save PDF and CSV reports created by the user.</td>
-</tr>
-
-<tr>
-<td>Internet</td>
-<td>Used for loading online images referenced in quiz files and serving advertisements.</td>
-</tr>
-
-</table>
+    <p>
+        However, no method of electronic storage or transmission can be
+        guaranteed to be completely secure.
+    </p>
 
 </div>
 
 <div class="card">
 
-<h2>Advertising</h2>
+    <h2>Changes to This Privacy Policy</h2>
 
-<p>
+    <p>
+        This Privacy Policy may be updated periodically.
+    </p>
 
-QuiXLS uses Google AdMob to display advertisements.
-
-AdMob may collect certain device identifiers and usage information in accordance with Google's own Privacy Policy.
-
-For more information, please visit:
-
-</p>
-
-<p>
-
-https://policies.google.com/privacy
-
-</p>
+    <p>
+        Any future updates will be published on this page with a revised
+        "Last Updated" date.
+    </p>
 
 </div>
+
 
 <div class="card">
 
-<h2>Third-Party Services</h2>
+    <h2>Contact</h2>
 
-<p>
+    <p>
+        If you have any questions regarding this Privacy Policy or
+        the application, please contact:
+    </p>
 
-The application may use trusted third-party services including:
+    <p>
+        <b>Developer:</b> JVS EdTek
+    </p>
 
-</p>
-
-<ul>
-
-<li>Google AdMob</li>
-
-<li>Google Play Services</li>
-
-</ul>
-
-<p>
-
-These services are governed by their respective privacy policies.
-
-</p>
+    <p>
+        <b>Email:</b> myworks.jvs@gmail.com
+    </p>
 
 </div>
 
-<div class="card">
-
-<h2>Children's Privacy</h2>
-
-<p>
-
-QuiXLS is intended for educational use.
-
-The application does not knowingly collect personal information from children through remote servers.
-
-Parents, guardians, and educational institutions are responsible for supervising usage where appropriate.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Data Security</h2>
-
-<p>
-
-Reasonable technical measures are used to help protect information processed by the application.
-
-However, no method of electronic storage or transmission can be guaranteed to be completely secure.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Changes to This Privacy Policy</h2>
-
-<p>
-
-This Privacy Policy may be updated periodically.
-
-Any future updates will be published on this page with a revised "Last Updated" date.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Contact</h2>
-
-<p>
-
-If you have any questions regarding this Privacy Policy or the application, please contact:
-
-</p>
-
-<p>
-
-<b>Developer:</b> JVS EdTek
-
-</p>
-
-<p>
-
-<b>Email:</b> myworks.jvs@gmail.com
-
-</p>
-
-</div>
 
 </div>
 
 <div class="footer">
 
-© 2026 JVS EdTek • QuiXLS • All Rights Reserved
+
+© 2026 JVS EdTek • Quixls • All Rights Reserved
 
 </div>
 
 </body>
 </html>
+
